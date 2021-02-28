@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
-Title ""
-Date ""
+Title "USB to Serial Converter"
+Date "2021-02-28"
 Rev ""
-Comp ""
+Comp "Pedro Minatel"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -43,7 +43,7 @@ F 3 "~" H 4950 4500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7550 3500 7650 3500
-Text Notes 3400 1450 0    79   Italic 0
+Text Notes 500  650  0    79   Italic 0
 USB to Serial Interface and USB Type C Connector
 $Comp
 L power:VBUS #PWR06

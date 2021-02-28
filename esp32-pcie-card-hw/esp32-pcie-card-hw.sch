@@ -429,35 +429,9 @@ Wire Wire Line
 Wire Wire Line
 	4600 2150 4750 2150
 Wire Wire Line
-	10200 3800 10300 3800
-Wire Wire Line
 	10200 1300 10300 1300
 Wire Wire Line
 	10200 1400 10300 1400
-Wire Wire Line
-	10200 1500 10300 1500
-Wire Wire Line
-	10200 1600 10300 1600
-Wire Wire Line
-	10200 1700 10300 1700
-Wire Wire Line
-	10200 1800 10300 1800
-Wire Wire Line
-	10200 1900 10300 1900
-Wire Wire Line
-	10200 2000 10300 2000
-Wire Wire Line
-	10200 2200 10300 2200
-Wire Wire Line
-	10200 2300 10300 2300
-Wire Wire Line
-	10200 2400 10300 2400
-Wire Wire Line
-	10200 2500 10300 2500
-Wire Wire Line
-	10200 2600 10300 2600
-Wire Wire Line
-	10200 2700 10300 2700
 Wire Wire Line
 	10200 3000 10300 3000
 Wire Wire Line
@@ -470,8 +444,6 @@ Wire Wire Line
 	10200 3400 10300 3400
 Wire Wire Line
 	10200 3500 10300 3500
-Wire Wire Line
-	6200 3200 6100 3200
 $Comp
 L Device:R_US R30
 U 1 1 5EA78E6D
@@ -590,8 +562,6 @@ Text GLabel 10300 3000 2    50   Output ~ 0
 FLASH_SCK
 Text GLabel 10300 3500 2    50   Output ~ 0
 FLASH_CS
-Text GLabel 10300 1500 2    50   Output ~ 0
-P_BUZZER
 $Comp
 L power:+3V3 #PWR0127
 U 1 1 5EAD1EA2
@@ -619,40 +589,6 @@ Wire Notes Line
 	5500 1600 4500 1600
 Wire Notes Line
 	4500 1600 4500 2700
-Wire Wire Line
-	6200 2800 6100 2800
-Wire Wire Line
-	6200 2400 6100 2400
-Wire Wire Line
-	6200 2500 6100 2500
-Text GLabel 10300 1600 2    50   BiDi ~ 0
-CRYPTO_SCL
-Text GLabel 10300 1700 2    50   BiDi ~ 0
-ETH_MDC
-Text GLabel 10300 1800 2    50   BiDi ~ 0
-ETH_CLK
-Text GLabel 10300 1900 2    50   BiDi ~ 0
-ETH_MDIO
-Text GLabel 10300 2000 2    50   BiDi ~ 0
-ETH_TXD-
-Text GLabel 10300 2200 2    50   BiDi ~ 0
-ETH_TXEN
-Text GLabel 10300 2300 2    50   BiDi ~ 0
-ETH_TXD+
-Text GLabel 10300 2400 2    50   BiDi ~ 0
-CRYPTO_SDA
-Text GLabel 10300 2500 2    50   BiDi ~ 0
-ETH_RXD-
-Text GLabel 10300 2600 2    50   BiDi ~ 0
-ETH_RXD+
-Text GLabel 10300 2700 2    50   BiDi ~ 0
-ETH_CRS
-Text GLabel 10300 3800 2    50   Output ~ 0
-EXP_TX
-Text GLabel 6100 3200 0    50   Input ~ 0
-BTN_USER
-Text GLabel 6100 2800 0    50   Input ~ 0
-EXP_RX
 $Comp
 L Device:C_Small C32
 U 1 1 5E9D65EB
@@ -1022,10 +958,6 @@ Wire Notes Line
 	950  550  4300 550 
 Wire Notes Line
 	950  1750 4300 1750
-Text GLabel 6100 2500 0    50   Output ~ 0
-RGB_B
-Text GLabel 6100 2400 0    50   Output ~ 0
-RGB_G
 Text GLabel 10300 1400 2    50   Output ~ 0
 GPIO2
 Text GLabel 3450 1200 2    50   Output ~ 0
@@ -1044,10 +976,6 @@ Wire Wire Line
 	10200 3700 10300 3700
 Text GLabel 10300 3700 2    50   Output ~ 0
 GPIO12
-Wire Wire Line
-	10200 3900 10300 3900
-Text GLabel 10300 3900 2    50   Output ~ 0
-RGB_R
 Text GLabel 1850 1350 0    50   Input ~ 0
 CRYPTO_SCL
 Text Notes 1100 1400 0    50   ~ 0
@@ -1346,7 +1274,7 @@ F 3 "" H 8600 4700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 8500 5150 0    50   Input ~ 0
-BTN_USER
+ESP_BOOT
 $Comp
 L Device:R_US R37
 U 1 1 5F32FB19
@@ -1594,4 +1522,12 @@ U 60B570C3
 F0 "USB-Serial" 50
 F1 "usb-serial.sch" 50
 $EndSheet
+Wire Wire Line
+	10200 2400 10300 2400
+Text GLabel 10300 2400 2    50   BiDi ~ 0
+CRYPTO_SDA
+Wire Wire Line
+	10200 1600 10300 1600
+Text GLabel 10300 1600 2    50   BiDi ~ 0
+CRYPTO_SCL
 $EndSCHEMATC
