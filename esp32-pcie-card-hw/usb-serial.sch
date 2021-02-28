@@ -1,0 +1,402 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	5700 3000 6550 3000
+Wire Wire Line
+	5250 4400 5300 4400
+Wire Wire Line
+	5100 4500 5300 4500
+$Comp
+L Device:R_US R7
+U 1 1 60B91AB3
+P 5100 4400
+F 0 "R7" V 5050 4250 50  0000 C CNN
+F 1 "0R" V 5050 4550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5140 4390 50  0001 C CNN
+F 3 "~" H 5100 4400 50  0001 C CNN
+	1    5100 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R5
+U 1 1 60B91AB9
+P 4950 4500
+F 0 "R5" V 4900 4350 50  0000 C CNN
+F 1 "0R" V 5000 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4990 4490 50  0001 C CNN
+F 3 "~" H 4950 4500 50  0001 C CNN
+	1    4950 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 3500 7650 3500
+Text Notes 3400 1450 0    79   Italic 0
+USB to Serial Interface and USB Type C Connector
+$Comp
+L power:VBUS #PWR06
+U 1 1 60B91AF3
+P 6950 1750
+F 0 "#PWR06" H 6950 1600 50  0001 C CNN
+F 1 "VBUS" H 6800 1800 50  0000 C CNN
+F 2 "" H 6950 1750 50  0001 C CNN
+F 3 "" H 6950 1750 50  0001 C CNN
+	1    6950 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4300 3900 4350
+Connection ~ 3900 4300
+Wire Wire Line
+	3900 4650 3900 4700
+Wire Wire Line
+	3900 4250 3900 4300
+Wire Wire Line
+	3900 3850 3900 3950
+$Comp
+L power:GND #PWR02
+U 1 1 60B91B06
+P 3900 4700
+F 0 "#PWR02" H 3900 4450 50  0001 C CNN
+F 1 "GND" H 3905 4527 50  0000 C CNN
+F 2 "" H 3900 4700 50  0001 C CNN
+F 3 "" H 3900 4700 50  0001 C CNN
+	1    3900 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 60B91B0C
+P 3900 4500
+F 0 "R2" H 4000 4500 50  0000 C CNN
+F 1 "47k5R" H 3700 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3940 4490 50  0001 C CNN
+F 3 "~" H 3900 4500 50  0001 C CNN
+	1    3900 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 60B91B12
+P 3900 4100
+F 0 "R1" H 4000 4100 50  0000 C CNN
+F 1 "21k1R" H 3700 4100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3940 4090 50  0001 C CNN
+F 3 "~" H 3900 4100 50  0001 C CNN
+	1    3900 4100
+	-1   0    0    1   
+$EndComp
+Text GLabel 6050 2800 0    50   Input ~ 0
+COM_VDD
+Text GLabel 2150 7400 2    50   Input ~ 0
+ESP_BOOT
+Text GLabel 2150 6250 2    50   Input ~ 0
+ESP_RESET
+Wire Wire Line
+	2050 6250 2150 6250
+Wire Wire Line
+	2050 6300 2050 6250
+Wire Wire Line
+	2050 7400 2150 7400
+Wire Wire Line
+	2050 7350 2050 7400
+Text GLabel 2150 6750 2    50   Input ~ 0
+COM_RTS
+Text GLabel 2150 6900 2    50   Input ~ 0
+COM_DTR
+Text GLabel 1350 7150 0    50   Input ~ 0
+COM_RTS
+Text GLabel 1350 6500 0    50   Input ~ 0
+COM_DTR
+Wire Wire Line
+	2050 6900 2150 6900
+Wire Wire Line
+	2050 6950 2050 6900
+Wire Wire Line
+	2050 6750 2150 6750
+Wire Wire Line
+	2050 6700 2050 6750
+Wire Wire Line
+	1400 6500 1350 6500
+Wire Wire Line
+	1400 7150 1350 7150
+Wire Wire Line
+	1700 7150 1750 7150
+Wire Wire Line
+	1700 6500 1750 6500
+$Comp
+L Device:R_US R4
+U 1 1 60B91B2B
+P 1550 7150
+F 0 "R4" V 1450 7150 50  0000 C CNN
+F 1 "10kR" V 1650 7150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1590 7140 50  0001 C CNN
+F 3 "~" H 1550 7150 50  0001 C CNN
+	1    1550 7150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 60B91B31
+P 1550 6500
+F 0 "R3" V 1450 6500 50  0000 C CNN
+F 1 "10kR" V 1650 6500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1590 6490 50  0001 C CNN
+F 3 "~" H 1550 6500 50  0001 C CNN
+	1    1550 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:MBT2222ADW1T1 Q1
+U 2 1 60B91B37
+P 1950 7150
+F 0 "Q1" H 2141 7104 50  0000 L CNN
+F 1 "MBT2222ADW1T1" H 2141 7195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 2150 7250 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MBT2222ADW1T1-D.PDF" H 1950 7150 50  0001 C CNN
+	2    1950 7150
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:MBT2222ADW1T1 Q1
+U 1 1 60B91B3E
+P 1950 6500
+F 0 "Q1" H 2141 6546 50  0000 L CNN
+F 1 "MBT2222ADW1T1" H 2141 6455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 2150 6600 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/MBT2222ADW1T1-D.PDF" H 1950 6500 50  0001 C CNN
+F 4 "MBT2222ADW1T1" H 1950 6500 50  0001 C CNN "MPN"
+	1    1950 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5700 3000 0    50   Input ~ 0
+COM_VBUS
+Text GLabel 7050 1750 1    50   Output ~ 0
+COM_VDD
+Connection ~ 7050 1850
+Wire Wire Line
+	7050 1850 7050 1750
+Connection ~ 6950 1850
+Wire Wire Line
+	6950 1850 6950 1750
+Connection ~ 7650 2250
+Wire Wire Line
+	7650 2300 7650 2250
+Connection ~ 6350 2250
+Wire Wire Line
+	6350 2300 6350 2250
+$Comp
+L power:GND #PWR08
+U 1 1 60B91B4E
+P 7650 2300
+F 0 "#PWR08" H 7650 2050 50  0001 C CNN
+F 1 "GND" H 7655 2127 50  0000 C CNN
+F 2 "" H 7650 2300 50  0001 C CNN
+F 3 "" H 7650 2300 50  0001 C CNN
+	1    7650 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60B91B54
+P 6350 2300
+F 0 "#PWR05" H 6350 2050 50  0001 C CNN
+F 1 "GND" H 6355 2127 50  0000 C CNN
+F 2 "" H 6350 2300 50  0001 C CNN
+F 3 "" H 6350 2300 50  0001 C CNN
+	1    6350 2300
+	1    0    0    -1  
+$EndComp
+Connection ~ 7300 1850
+Wire Wire Line
+	7650 1850 7650 1950
+Wire Wire Line
+	7300 1850 7650 1850
+Wire Wire Line
+	7300 1850 7050 1850
+Wire Wire Line
+	7300 1950 7300 1850
+Wire Wire Line
+	6700 2250 6700 2150
+Wire Wire Line
+	6350 2250 6700 2250
+Wire Wire Line
+	6350 2150 6350 2250
+Connection ~ 6700 1850
+Wire Wire Line
+	6350 1850 6350 1950
+Wire Wire Line
+	6700 1850 6350 1850
+Wire Wire Line
+	6700 1850 6700 1950
+Wire Wire Line
+	6950 1850 6700 1850
+Wire Wire Line
+	6950 2400 6950 1850
+Wire Wire Line
+	7650 2250 7650 2150
+Wire Wire Line
+	7300 2250 7650 2250
+Wire Wire Line
+	7300 2150 7300 2250
+Wire Wire Line
+	7050 2400 7050 1850
+$Comp
+L Device:C_Small C1
+U 1 1 60B91B6C
+P 6350 2050
+F 0 "C1" H 6500 2050 50  0000 C CNN
+F 1 "4.7uF" H 6500 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6350 2050 50  0001 C CNN
+F 3 "~" H 6350 2050 50  0001 C CNN
+	1    6350 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 60B91B72
+P 6700 2050
+F 0 "C2" H 6850 2050 50  0000 C CNN
+F 1 "100nF" H 6850 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6700 2050 50  0001 C CNN
+F 3 "~" H 6700 2050 50  0001 C CNN
+	1    6700 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 60B91B78
+P 7650 2050
+F 0 "C4" H 7500 2050 50  0000 C CNN
+F 1 "100nF" H 7500 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7650 2050 50  0001 C CNN
+F 3 "~" H 7650 2050 50  0001 C CNN
+	1    7650 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 60B91B7E
+P 7300 2050
+F 0 "C3" H 7150 2050 50  0000 C CNN
+F 1 "4.7uF" H 7150 2150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7300 2050 50  0001 C CNN
+F 3 "~" H 7300 2050 50  0001 C CNN
+	1    7300 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8050 3600 8050 3500
+$Comp
+L power:GND #PWR09
+U 1 1 60B91B85
+P 8050 3600
+F 0 "#PWR09" H 8050 3350 50  0001 C CNN
+F 1 "GND" H 8055 3427 50  0000 C CNN
+F 2 "" H 8050 3600 50  0001 C CNN
+F 3 "" H 8050 3600 50  0001 C CNN
+	1    8050 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3500 8050 3500
+Text GLabel 6400 4300 2    50   Output ~ 0
+COM_DTR
+Text GLabel 6400 3800 2    50   Output ~ 0
+ESP_RX
+Text GLabel 6400 3900 2    50   Input ~ 0
+ESP_TX
+Text GLabel 6400 4000 2    50   Output ~ 0
+COM_RTS
+Wire Wire Line
+	6150 2800 6050 2800
+$Comp
+L Device:R_US R6
+U 1 1 60B91B91
+P 6300 2800
+F 0 "R6" V 6400 2800 50  0000 C CNN
+F 1 "4k7 1%" V 6200 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6340 2790 50  0001 C CNN
+F 3 "~" H 6300 2800 50  0001 C CNN
+	1    6300 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R8
+U 1 1 60B91B97
+P 7800 3500
+F 0 "R8" V 7900 3600 50  0000 C CNN
+F 1 "10kR" V 7900 3400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7840 3490 50  0001 C CNN
+F 3 "~" H 7800 3500 50  0001 C CNN
+	1    7800 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6550 2800 6450 2800
+Wire Wire Line
+	6300 3800 6400 3800
+Wire Wire Line
+	6300 3900 6400 3900
+Wire Wire Line
+	6300 4300 6400 4300
+Wire Wire Line
+	6300 4000 6400 4000
+Text GLabel 4700 4400 0    50   BiDi ~ 0
+USB_D-
+Text GLabel 4700 4500 0    50   BiDi ~ 0
+USB_D+
+Wire Wire Line
+	5800 6200 5800 6300
+$Comp
+L power:GND #PWR07
+U 1 1 60B91BF8
+P 5800 6300
+F 0 "#PWR07" H 5800 6050 50  0001 C CNN
+F 1 "GND" H 5805 6127 50  0000 C CNN
+F 2 "" H 5800 6300 50  0001 C CNN
+F 3 "" H 5800 6300 50  0001 C CNN
+	1    5800 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_USB:CP2102N-Axx-xQFN28 U?
+U 1 1 60BDDEFC
+P 5800 4900
+F 0 "U?" H 6250 6200 50  0000 C CNN
+F 1 "CP2102N-Axx-xQFN28" H 6300 3600 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm" H 7100 3650 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 5850 4150 50  0001 C CNN
+	1    5800 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4400 4950 4400
+Wire Wire Line
+	4700 4500 4800 4500
+Wire Wire Line
+	3900 4300 5300 4300
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60C6B856
+P 3900 3850
+F 0 "#PWR?" H 3900 3700 50  0001 C CNN
+F 1 "+3V3" H 3915 4023 50  0000 C CNN
+F 2 "" H 3900 3850 50  0001 C CNN
+F 3 "" H 3900 3850 50  0001 C CNN
+	1    3900 3850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
