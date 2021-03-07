@@ -826,21 +826,6 @@ Wire Wire Line
 	5400 2100 6200 2100
 Text Notes 1050 3100 0    50   Italic 0
 TLV75533 @500mA\nTLV75733 @1000mA\n
-Wire Wire Line
-	3350 2550 3350 2600
-Wire Wire Line
-	3350 2250 3350 2200
-$Comp
-L power:GND #PWR0183
-U 1 1 5F2E4945
-P 3350 2600
-F 0 "#PWR0183" H 3350 2350 50  0001 C CNN
-F 1 "GND" H 3355 2427 50  0000 C CNN
-F 2 "" H 3350 2600 50  0001 C CNN
-F 3 "" H 3350 2600 50  0001 C CNN
-	1    3350 2600
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:Crystal_GND24 Y2
 U 1 1 5F2FAE2E
@@ -1022,17 +1007,6 @@ Wire Wire Line
 	10650 1100 10750 1100
 Text GLabel 2850 4150 2    50   Input ~ 0
 FLASH_SI
-$Comp
-L power:+3V3 #PWR0197
-U 1 1 5F33E954
-P 3350 2200
-F 0 "#PWR0197" H 3350 2050 50  0001 C CNN
-F 1 "+3V3" H 3365 2373 50  0000 C CNN
-F 2 "" H 3350 2200 50  0001 C CNN
-F 3 "" H 3350 2200 50  0001 C CNN
-	1    3350 2200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+3V3 #PWR0198
 U 1 1 5F33ED37
@@ -1505,7 +1479,7 @@ F 4 "ATECC608A-MAHDA" H 4950 5550 50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 1000 6000 500  500 
+S 3000 5000 500  500 
 U 60B56722
 F0 "PCIe-Connector" 50
 F1 "pci-e_connector.sch" 50
@@ -1530,4 +1504,52 @@ Wire Wire Line
 	10200 1600 10300 1600
 Text GLabel 10300 1600 2    50   BiDi ~ 0
 CRYPTO_SCL
+NoConn ~ 6200 2800
+NoConn ~ 6200 3200
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J?
+U 1 1 604AE2F1
+P 1600 6700
+F 0 "J?" H 1157 6746 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 2650 6100 50  0000 R CNN
+F 2 "" H 1600 6700 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 1250 5450 50  0001 C CNN
+	1    1600 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604B0F40
+P 1550 7450
+F 0 "#PWR?" H 1550 7200 50  0001 C CNN
+F 1 "GND" H 1555 7277 50  0000 C CNN
+F 2 "" H 1550 7450 50  0001 C CNN
+F 3 "" H 1550 7450 50  0001 C CNN
+	1    1550 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 7300 1500 7400
+Wire Wire Line
+	1500 7400 1550 7400
+Wire Wire Line
+	1600 7400 1600 7300
+Wire Wire Line
+	1550 7450 1550 7400
+Connection ~ 1550 7400
+Wire Wire Line
+	1550 7400 1600 7400
+$Comp
+L power:+3V3 #PWR?
+U 1 1 604C3267
+P 1600 6000
+F 0 "#PWR?" H 1600 5850 50  0001 C CNN
+F 1 "+3V3" H 1615 6173 50  0000 C CNN
+F 2 "" H 1600 6000 50  0001 C CNN
+F 3 "" H 1600 6000 50  0001 C CNN
+	1    1600 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6000 1600 6100
 $EndSCHEMATC
